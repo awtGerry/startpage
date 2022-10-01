@@ -1,0 +1,45 @@
+:root {
+  /** colors */
+  --color-name: gruvbox;
+  --color-bg-shade: #3c3826;
+  --color-bg-base: #1d2021;
+  --color-bg-surface: #282828;
+  --color-bg-highlight: #3c302f;
+  --color-fg-shade: #83a598;
+  --color-fg-base: #458588;
+  --color-fg-surface: #f9ffd2;
+  --color-fg-highlight: #ebdbb2;
+  --color-primary-bg: #b8bb26;
+  --color-primary-base: #98971a;
+  --color-primary-fg: #459588;
+  --color-secondary-bg: #9d0006;
+  --color-secondary-base: #fb4934;
+  --color-secondary-fg: #d65d0e;
+  --color-palette-red: #cc241d;
+  --color-palette-green: #98971a;
+  --color-palette-yellow: #d79921;
+  --color-palette-blue: #076678;
+  --color-palette-purple: #b16286;
+  --color-palette-cyan: #56B6C2;
+  --color-palette-orange: #fe8019;
+  
+  /** general */
+  --font-family: 'Roboto Slab', serif;
+  --display-image: block;
+
+  /** surface */
+  --surface-maxWidth: 1080px;
+  --surface-shadow: 3px 3px 9px rgb(69,133,136), 6px 6px 9px rgb(60.5, 48, 76);
+  --surface-borderRadius: 8px;
+
+  /** spacing */
+  --space-smallest: 0.125rem;
+  --space-small: 0.5rem;
+  --space-medium: 1rem;
+  --space-large: 1.5rem;
+  --space-largest: 3rem;
+
+  /** others */
+  --picture-size: 300px;
+  --group-count: 5;
+}
