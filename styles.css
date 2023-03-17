@@ -190,6 +190,7 @@ body {
   list-style: none;
 }
 
+
 .bookmark-group > ul > li > a {
   display: block;
   padding: 2px 0;
@@ -198,6 +199,10 @@ body {
   overflow-x: hidden;
   width: 100%;
   outline: none;
+}
+
+.bookmark-group > ul > li > a:hover {
+  color: var(--color-palette-blue);
 }
 
 .bookmark-group > ul > li > a:hover::before,
