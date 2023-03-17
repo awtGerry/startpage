@@ -1,36 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 :root {
   /** colors */
-  --color-name: gruvbox;
-  --color-bg-shade: #3c3826;
-  --color-bg-base: #1d2021;
-  --color-bg-surface: #282828;
-  --color-bg-highlight: #3c302f;
-  --color-fg-shade: #83a598;
-  --color-fg-base: #458588;
-  --color-fg-surface: #f9ffd2;
-  --color-fg-highlight: #ebdbb2;
-  --color-primary-bg: #b8bb26;
-  --color-primary-base: #98971a;
-  --color-primary-fg: #459588;
-  --color-secondary-bg: #9d0006;
-  --color-secondary-base: #fb4934;
-  --color-secondary-fg: #d65d0e;
-  --color-palette-red: #cc241d;
-  --color-palette-green: #98971a;
-  --color-palette-yellow: #d79921;
-  --color-palette-blue: #076678;
-  --color-palette-purple: #b16286;
+  --color-name: custom;
+  --color-bg-shade: #111111;
+  --color-bg-base: #151515;
+  --color-bg-surface: #191919;
+  --color-bg-highlight: #1D1D1D;
+  --color-fg-shade: #CEBEBE;
+  --color-fg-base: #F9F7F7;
+  --color-fg-surface: #FFFFFF;
+  --color-fg-highlight: #FFFFFF;
+  --color-primary-bg: #005466;
+  --color-primary-base: #00A8CC;
+  --color-primary-fg: #33DBFF;
+  --color-secondary-bg: #451371;
+  --color-secondary-base: #892CDC;
+  --color-secondary-fg: #C89DEF;
+  --color-palette-red: #E06C75;
+  --color-palette-green: #98C379;
+  --color-palette-yellow: #E5C07B;
+  --color-palette-blue: #61AFEF;
+  --color-palette-purple: #C678DD;
   --color-palette-cyan: #56B6C2;
-  --color-palette-orange: #fe8019;
+  --color-palette-orange: #FFBB7C;
   
   /** general */
-  --font-family: 'Roboto Slab', serif;
+  /* --font-family: Roboto; */
+  --font-family: 'Quicksand', sans-serif;
   --display-image: block;
 
   /** surface */
-  --surface-maxWidth: 1080px;
-  --surface-shadow: 3px 3px 9px rgb(69,133,136), 6px 6px 9px rgb(60.5, 48, 76);
-  --surface-borderRadius: 8px;
+  --surface-maxWidth: 1280px;
+  --surface-shadow: 20px 20px 10px #005466;
+  --surface-borderRadius: 0px;
 
   /** spacing */
   --space-smallest: 0.125rem;
