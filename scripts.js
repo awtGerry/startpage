@@ -9,14 +9,14 @@ const searchInput = document.querySelector("#searchbar > input")
 const searchButton = document.querySelector("#searchbar > button")
 
 const lookup = {"/":"/","deepl":"https://deepl.com/","reddit":"https://reddit.com/","maps":"https://maps.google.com/"}
-const engine = "ecosia"
+const engine = "duckduckgo"
 const engineUrls = {
-  deepl: "https://www.deepl.com/translator#-/-/",
-  duckduckgo: "https://duckduckgo.com/?q=",
-  ecosia: "https://www.ecosia.org/search?q=",
-  google: "https://www.google.com/search?q=",
-  startpage: "https://www.startpage.com/search?q=",
-  youtube: "https://www.youtube.com/results?q=",
+  deepl: "https://www.deepl.com/translator#-/-/{query}",
+  duckduckgo: "https://duckduckgo.com/?q={query}",
+  ecosia: "https://www.ecosia.org/search?q={query}",
+  google: "https://www.google.com/search?q={query}",
+  startpage: "https://www.startpage.com/search?q={query}",
+  youtube: "https://www.youtube.com/results?q={query}",
 }
 
 const isWebUrl = value => {
@@ -31,7 +31,8 @@ const isWebUrl = value => {
 const getTargetUrl = value => {
   if (isWebUrl(value)) return value
   if (lookup[value]) return lookup[value]
-  return engineUrls[engine] + value
+  const url = engineUrls[engine] ?? engine
+  return url.replace("{query}", value)
 }
 
 const search = () => {
@@ -47,7 +48,7 @@ searchButton.onclick = search
  * inject bookmarks into html
  */
 
-const bookmarks = [{"id":"So33UOEMgxre6Zho","label":"SOCIAL","bookmarks":[{"id":"JMhoGmw2WM7CVwnV","label":"whats","url":"https://web.whatsapp.com/"},{"id":"2z48HxhKVaeScW19","label":"twitter","url":"https://twitter.com/home"},{"id":"ccuXthgUyu1CLJvk","label":"youtube","url":"https://www.youtube.com/"}]},{"id":"peQDgR8TDTPoXupG","label":"SPORTS","bookmarks":[{"id":"Q1GYZjt84XjOZk2A","label":"playdoit","url":"https://www.playdoit.mx"},{"id":"V8NCjO8BZI3vatoA","label":"vipbox","url":"https://www.vipbox.lc/"},{"id":"RMxLh5XgARnAQQDg","label":"viperplay","url":"https://viperplay.online/"},{"id":"eEui8xUNrwYV6oyy","label":"pirlo","url":"pirlotv.fr"}]},{"id":"PfLjrq2Evb4oAbkg","label":"ENTERTAINMENT","bookmarks":[{"id":"2Rbs3DRCHcuSdyW6","label":"HBO max","url":"https://play.hbomax.com/profile/select"},{"id":"0i0ncN2W8rrDncWX","label":"Star +","url":"https://www.starplus.com/select-profile"},{"id":"tPAQY6h5Jb5IPHdd","label":"Prime Video","url":"https://www.primevideo.com/storefront/ref=atv_me_RentBuy_c_9zZ8D2_1_0?language=es_ES"},{"id":"mnmGP21kPjaP728O","label":"Disney +","url":"https://www.disneyplus.com/select-profile"}]},{"id":"v3GPwcLySymIiVQP","label":"DEV","bookmarks":[{"id":"zNbIkAHK5uCg1lwV","label":"github","url":"https://github.com/awtGerry"},{"id":"mtTF6Ktr5ARre6PP","label":"codepen","url":"https://codepen.io/trending"},{"id":"N38iRWy8YEODtrNL","label":"frontendmasters","url":"https://frontendmasters.com/dashboard/"}]},{"id":"sgz8ADX8rgTInyif","label":"OTHER","bookmarks":[{"id":"u7TPClIyEQl5yH4T","label":"Amazon","url":"https://www.amazon.com.mx/"},{"id":"R1CMBkFG2EcAWWHw","label":"Gmail","url":"https://mail.google.com/mail/u/0/#inbox"},{"id":"8ONw24y9zoQVPDOr","label":"twitch.tv","url":"https://www.twitch.tv/"},{"id":"7NjvUCf0UtKRj91K","label":"chess.com","url":"https://www.chess.com/"}]}]
+const bookmarks = [{"id":"osILN9ZMHwMCfFRW","label":"lyra","bookmarks":[{"id":"U3eHGLY9IVxwPhnD","label":"the hub","url":"https://github.com/awtGerry"},{"id":"sc7TKLR1IJdyVoyB","label":"twitter","url":"https://twitter.com/home"},{"id":"UMREBjHf2EjXEtqi","label":"reddit","url":"https://www.reddit.com/"}]},{"id":"1rkrnJFbvU2P79uW","label":"beermeup","bookmarks":[{"id":"WozCMcsfubB2RCI3","label":"youtube","url":"https://www.youtube.com/"},{"id":"oWSKoxFjKo3vCK5q","label":"chess","url":"https://www.chess.com/"},{"id":"n87pRW3js3LBT555","label":"blackjack","url":"https://wizardofodds.com/play/blackjack-v2/"},{"id":"rd2Wm5ZccFVptzrL","label":"twitch","url":"https://www.twitch.tv/"}]},{"id":"yHxsHT8ZzrjTRLPe","label":"!docs","bookmarks":[{"id":"1Ta6HZcdHIMJzbbD","label":"aur","url":"https://aur.archlinux.org/packages"},{"id":"r4LxV4GtuefyvRPl","label":"nixpkgs","url":"https://search.nixos.org/packages"},{"id":"l0OnKTmR4q7TGy7O","label":"crates","url":"https://crates.io/"},{"id":"PO3J0YmZg0Kun0eZ","label":"rs-docs","url":"https://docs.rs/"}]},{"id":"3C4XU3JGOzEsOWot","label":"devy","bookmarks":[{"id":"7srO1NgheOAMkW7w","label":"esvigis","url":"https://www.svgrepo.com/"},{"id":"8hu3pPezBt1MsfWu","label":"icons","url":"https://fontawesome.com/icons"},{"id":"aP6jXKzufAgsxfzy","label":"img to svg","url":"https://picsvg.com/"},{"id":"NzolOfyhb4zaKe9v","label":"components","url":"https://tailwindui.com/components"}]}]
 
 const createGroupContainer = () => {
   const container = document.createElement("div")
